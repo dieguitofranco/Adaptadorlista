@@ -25,8 +25,8 @@ class Pantalla2 : AppCompatActivity(), View.OnClickListener {
                     binding.txtNamePerson.text.toString(),
                     binding.txtSurnamePeron.text.toString(),
                     binding.txtPhoneNumber.text.toString(),
-                    binding.txtEmail.text.toString()
-
+                    binding.txtEmail.text.toString(),
+                    binding.txtUrl.text.toString()
                 )
                 Globals.listaPeronas.persons.add(person)
                 Toast.makeText(this, "Se ha agregado una persona", Toast.LENGTH_LONG).show()
@@ -41,6 +41,7 @@ class Pantalla2 : AppCompatActivity(), View.OnClickListener {
         binding.txtSurnamePeron.setText("")
         binding.txtPhoneNumber.setText("")
         binding.txtEmail.setText("")
+        binding.txtUrl.setText("")
     }
 }
 

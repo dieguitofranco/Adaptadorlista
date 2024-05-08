@@ -16,7 +16,6 @@ class Pantalla3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPantalla3Binding.inflate(layoutInflater)
         setContentView(binding.root)
-        //var adapter : ArrayAdapter<String> = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Globals.listaPeronas.getArrayListFullName())
         var adapter : PersonAdapter = PersonAdapter(this, Globals.listaPeronas)
         binding.lstPersonas.adapter = adapter
         Toast.makeText(this, Globals.listaPeronas.persons.size.toString(), Toast.LENGTH_LONG).show()
