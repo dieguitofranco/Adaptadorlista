@@ -17,9 +17,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding.root)
         binding.btnScreenOne.setOnClickListener(this)
         binding.btnScreenTwo.setOnClickListener(this)
+        binding.txtActiveName.text = Globals.getSharedPreference(this, "cache", "name")
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        binding.txtActiveName.text = Globals.getSharedPreference(this, "cache", "name")
+
+    }
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.btnScreenOne -> {

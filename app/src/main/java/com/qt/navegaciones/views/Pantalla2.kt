@@ -28,6 +28,7 @@ class Pantalla2 : AppCompatActivity(), View.OnClickListener {
                     binding.txtEmail.text.toString(),
                     binding.txtUrl.text.toString()
                 )
+                Globals.addSharedPreference(this, "cache", "name", person.name)
                 Globals.listaPeronas.persons.add(person)
                 Toast.makeText(this, "Se ha agregado una persona", Toast.LENGTH_LONG).show()
                 clearFields()
