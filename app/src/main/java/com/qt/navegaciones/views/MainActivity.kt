@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import com.qt.navegaciones.databinding.ActivityMainBinding
 import com.qt.navegaciones.models.Globals
-import com.qt.navegaciones.models.Person
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var binding: ActivityMainBinding
@@ -15,6 +14,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        Globals.initDatabase(this)
         binding.btnScreenOne.setOnClickListener(this)
         binding.btnScreenTwo.setOnClickListener(this)
         binding.txtActiveName.text = Globals.getSharedPreference(this, "cache", "name")

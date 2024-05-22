@@ -1,10 +1,12 @@
 package com.qt.navegaciones.models
 
+import com.qt.navegaciones.models.database.entities.PersonEntity
+
 class Persons
 {
-    var persons = ArrayList<Person>()
+    var persons = ArrayList<PersonEntity>()
 
-   constructor(persons: ArrayList<Person>){
+   constructor(persons: ArrayList<PersonEntity>){
        this.persons = persons
    }
 

@@ -9,12 +9,13 @@ import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.qt.navegaciones.R
 import com.qt.navegaciones.models.Persons
+import com.qt.navegaciones.models.database.entities.PersonEntity
 
 class PersonAdapter : BaseAdapter{
     var context : Context
     var persons : Persons
 
-    constructor(context : Context, persons: Persons){
+    constructor(context: Context, persons: Persons){
         this.context = context
         this.persons = persons
     }
